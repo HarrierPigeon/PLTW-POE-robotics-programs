@@ -1,3 +1,12 @@
+/*
+  Project Title: Basic Outputs Programming, Part 1
+  Team Members: Joseph
+  Date: 2018-04-7
+  Section: 3.1.2
+  Pseudocode: Meh.
+
+*/
+
 #pragma config(Sensor, dgtl10, rLED,           sensorLEDtoVCC)
 #pragma config(Sensor, dgtl11, yLED,           sensorLEDtoVCC)
 #pragma config(Sensor, dgtl12, gLED,           sensorLEDtoVCC)

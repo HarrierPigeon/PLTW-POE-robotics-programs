@@ -1,11 +1,13 @@
 /*
-  Project Title: Test Bed Template
+  Project Title: Basic Outputs Programming, Part 3
   Team Members: Joseph
   Date: 2018-04-7
-  Section: 3.1.1
-  Pseudocode: define test bed sensors and ports.
+  Section: 3.1.2
+  Pseudocode: Meh.
 
 */
+
+  //All defined for the testbed, but aren't all used, because because.
 #pragma config(Sensor, in1,    line,           sensorLineFollower)
 #pragma config(Sensor, in2,    pot,            sensorPotentiometer)
 #pragma config(Sensor, in3,    light,          sensorReflection)
