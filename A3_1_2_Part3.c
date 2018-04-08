@@ -24,8 +24,17 @@
 task main()
 {
   while(1){
-      
-
+      startMotor(motorLeft,50);
+      waitInMilliseconds(5000);
+      stopMotor(motorLeft);
+      startMotor(motorRight,75);
+      waitInMilliseconds(2500);
+      stopMotor(motorRight);
+      waitInMilliseconds(100);
+      startMotor(motorLeft,100);
+      startMotor(motorRight,100);
+      waitInMilliseconds(7250);
+      stopAllMotors();
 
   }
 }
