@@ -1,5 +1,9 @@
-#pragma config(Sensor, in1,   line,   sensorLineFollower)
-
+#pragma config(Sensor, dgtl10, rLED,           sensorLEDtoVCC)
+#pragma config(Sensor, dgtl11, yLED,           sensorLEDtoVCC)
+#pragma config(Sensor, dgtl12, gLED,           sensorLEDtoVCC)
+#pragma config(Motor,  port2,           motorRight,    tmotorNone, openLoop)
+#pragma config(Motor,  port3,           motorLeft,     tmotorNone, openLoop)
+#pragma config(Motor,  port9,           servo,         tmotorNone, openLoop)
 
  // RobotC simple template
 task main()
@@ -22,7 +26,6 @@ task main()
     turnLedOn(gLED);
     waitInMilliseconds(500);
     turnLEDOff(gLED);
-    
+
     }
 }
-
