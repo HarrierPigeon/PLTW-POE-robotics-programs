@@ -1,9 +1,9 @@
 /*
-  Project Title: 3.1.2 Part 2
+  Project Title: Basic Outputs Programming, Part 2
   Team Members: Joseph
   Date: 2018-04-7
-  Section: 3.1.1
-  Pseudocode: define test bed sensors and ports.
+  Section: 3.1.2
+  Pseudocode: Meh.
 
 */
 #pragma config(Sensor, in1,    line,           sensorLineFollower)
