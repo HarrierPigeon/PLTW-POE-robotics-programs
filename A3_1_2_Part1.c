@@ -11,8 +11,8 @@ task main()
   while(1)
     {
     // Place control code here
-    turnLEDOff(gLED);
-    wait(1);
+    turnLEDOff(rLED);
+    waitInMilliseconds(500);
     turnLEDOn(gLED);
     waitInMilliseconds(500);
     turnLedOn(yLED);
@@ -25,7 +25,7 @@ task main()
     waitInMilliseconds(500);
     turnLedOn(gLED);
     waitInMilliseconds(500);
-    turnLEDOff(gLED);
+    //turnLEDOff(gLED);
 
     }
 }
