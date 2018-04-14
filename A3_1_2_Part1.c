@@ -11,7 +11,7 @@ task main()
   while(1)
     {
     // Place control code here
-    turnLEDOff(rLED);
+    turnLEDOff(s);
     waitInMilliseconds(500);
     turnLEDOn(gLED);
     waitInMilliseconds(500);
