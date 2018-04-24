@@ -4,7 +4,9 @@
   Date: 2018-04-7
   Section: 3.1.2
   Pseudocode: Follow 3.1.2's procedures, specifically:
-  Write a program that performs the following simple behaviors. Use the natural language functions where appropriate as shown below. Add comments at the end of each command line to explain the purpose of each step.
+  Write a program that performs the following simple behaviors. 
+  Use the natural language functions where appropriate as shown below. 
+  Add comments at the end of each command line to explain the purpose of each step.
   | Program the servo to go to position –127 for 2 seconds.
   | Go to position –63 for 3 seconds.
   | Go to position 0 for 2 seconds.
