@@ -1,14 +1,4 @@
-/*
-    3.1.3 Part 2.
-    Joseph Robertson
-    2018-04-14
 
-
-
-*/
-
-
-//Basic Testbed Setup, because it won't be changing for a good while.
 #pragma config(Sensor, in1,    line,           sensorLineFollower)
 #pragma config(Sensor, in2,    pot,            sensorPotentiometer)
 #pragma config(Sensor, in3,    light,          sensorReflection)
@@ -22,6 +12,18 @@
 #pragma config(Motor,  port2,           motorRight,    tmotorNone, openLoop)
 #pragma config(Motor,  port3,           motorLeft,     tmotorNone, openLoop)
 #pragma config(Motor,  port9,           servo,         tmotorNone, openLoop)
+//Basic Testbed Setup, because it won't be changing for a good while.
+
+/*
+    3.1.3 Part 2.
+    Joseph Robertson
+    2018-04-14
+
+
+
+*/
+
+
 
 
 task main()
