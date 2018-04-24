@@ -1,3 +1,12 @@
+
+#pragma config(Sensor, dgtl10, rLED,           sensorLEDtoVCC)
+#pragma config(Sensor, dgtl11, yLED,           sensorLEDtoVCC)
+#pragma config(Sensor, dgtl12, gLED,           sensorLEDtoVCC)
+#pragma config(Motor,  port2,           motorRight,    tmotorNone, openLoop)
+#pragma config(Motor,  port3,           motorLeft,     tmotorNone, openLoop)
+#pragma config(Motor,  port9,           servo,         tmotorNone, openLoop)
+
+
 /*
   Project Title: Basic Outputs Programming, Part 1
   Team Members: Joseph
@@ -7,34 +16,33 @@
 
 */
 
-#pragma config(Sensor, dgtl10, rLED,           sensorLEDtoVCC)
-#pragma config(Sensor, dgtl11, yLED,           sensorLEDtoVCC)
-#pragma config(Sensor, dgtl12, gLED,           sensorLEDtoVCC)
-#pragma config(Motor,  port2,           motorRight,    tmotorNone, openLoop)
-#pragma config(Motor,  port3,           motorLeft,     tmotorNone, openLoop)
-#pragma config(Motor,  port9,           servo,         tmotorNone, openLoop)
+
 
  // RobotC simple template
 task main()
 {
-  while(1)
+
+
+
+
+  while(1==1)
     {
     // Place control code here
-    turnLEDOff(gLED);
-    wait(1);
-    turnLEDOn(gLED);
-    waitInMilliseconds(500);
+    turnLEDOff(rLED);
+    //waitInMilliseconds(100);
+    //turnLEDOn(gLED);
+    waitInMilliseconds(100);
     turnLedOn(yLED);
-    waitInMilliseconds(500);
+    waitInMilliseconds(100);
     turnLedOff(gLED);
-    waitInMilliseconds(500);
+    waitInMilliseconds(100);
     turnLedOn(rLED);
-    waitInMilliseconds(500);
+    waitInMilliseconds(100);
     turnLEDOff(yLED);
-    waitInMilliseconds(500);
-    turnLedOn(gLED);
-    waitInMilliseconds(500);
-    turnLEDOff(gLED);
+    waitInMilliseconds(100);
+    turnLEDOn(gLED);
+    waitInMilliseconds(100);
+    //turnLEDOff(gLED);
 
     }
 }

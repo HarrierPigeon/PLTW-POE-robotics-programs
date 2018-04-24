@@ -1,11 +1,4 @@
-/*
-  Project Title: Basic Outputs Programming, Part 2
-  Team Members: Joseph
-  Date: 2018-04-7
-  Section: 3.1.2
-  Pseudocode: Meh.
 
-*/
 #pragma config(Sensor, in1,    line,           sensorLineFollower)
 #pragma config(Sensor, in2,    pot,            sensorPotentiometer)
 #pragma config(Sensor, in3,    light,          sensorReflection)
@@ -20,6 +13,15 @@
 #pragma config(Motor,  port3,           motorLeft,     tmotorNone, openLoop)
 #pragma config(Motor,  port9,           servo,         tmotorNone, openLoop)
 
+
+/*
+  Project Title: Basic Outputs Programming, Part 2
+  Team Members: Joseph
+  Date: 2018-04-7
+  Section: 3.1.2
+  Pseudocode: Meh.
+
+*/
 
 task main()
 {
