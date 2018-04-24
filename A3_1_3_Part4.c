@@ -1,6 +1,3 @@
-
-
-
 #pragma config(Sensor, in1,    line,           sensorLineFollower)
 #pragma config(Sensor, in2,    pot,            sensorPotentiometer)
 #pragma config(Sensor, in3,    light,          sensorReflection)
@@ -19,7 +16,7 @@
 /*
 Activity 3.1.3 Part 4
 Joseph Robertson
-Started 2018-04-14
+Started 2018-04-24
 */
 
 task main() {
@@ -39,10 +36,10 @@ task main() {
   while(0==0) {
     //Green is forward, red is backward
     turnLedOn(gLED);
-		startMotor(motorLeft,motorPower);
-		startMotor(motorRight,motorPower);
-		untilEncoderCounts(forwardDegrees,quad);
-		turnLedOff(gLED);
+	startMotor(motorLeft,motorPower);
+	startMotor(motorRight,motorPower);
+	untilEncoderCounts(forwardDegrees,quad);
+	turnLedOff(gLED);
     turnLedOn(rLED);
     stopAllMotors();
     waitInMilliseconds(10);

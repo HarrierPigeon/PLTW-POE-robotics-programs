@@ -1,3 +1,4 @@
+
 #pragma config(Sensor, in1,    line,           sensorLineFollower)
 #pragma config(Sensor, in2,    pot,            sensorPotentiometer)
 #pragma config(Sensor, in3,    light,          sensorReflection)
@@ -11,27 +12,35 @@
 #pragma config(Motor,  port2,           motorRight,    tmotorNone, openLoop)
 #pragma config(Motor,  port3,           motorLeft,     tmotorNone, openLoop)
 #pragma config(Motor,  port9,           servo,         tmotorNone, openLoop)
-//Standard Testbed Sensor Setup, Platinum Package
-
 /*
-Activity 3.1.3 Part 3
-Joseph Robertson
-Started 2018-04-24
+  Project Title: 3.1.3 Part 5
+  Team Members: Joseph
+  Date: 2018-04-24
+  Section: 3.1.3
+  Pseudocode: tickle a bunny.
+
 */
 
 
 
-task main() {
-	while(0==0) {
-		if (pot > 2048) {
-			turnLedOn(gLED);
-			stopAllMotors();
-		} else if (pot >= 2048) {
-			turnLedOff(gLED);
-			turnLedOn(yLED);
-			startMotor(motorLeft,63);
-		}
-	}
+
+task main()
+
+
+{
+  int thresholdvalue;
+  thresholdvalue = 1400;  //Put the threshold value here, plz.
+  while(0==0) {
+    /*
+    Move the servo to position 127 until a dark object is detected.
+    Move servo to position to -127
+    */
+    setServo(servo,127);
+    untilDark(thresholdvalue,line);
+    setServo(servo,-127);
+    waitInMilliseconds(2000);
+
+  }
 
 
 

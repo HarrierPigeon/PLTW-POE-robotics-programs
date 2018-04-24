@@ -11,27 +11,43 @@
 #pragma config(Motor,  port2,           motorRight,    tmotorNone, openLoop)
 #pragma config(Motor,  port3,           motorLeft,     tmotorNone, openLoop)
 #pragma config(Motor,  port9,           servo,         tmotorNone, openLoop)
-//Standard Testbed Sensor Setup, Platinum Package
-
 /*
-Activity 3.1.3 Part 3
-Joseph Robertson
-Started 2018-04-24
+  Project Title: 3.1.3 Part 6
+  Team Members: Joseph
+  Date: 2018-04-24
+  Section: 3.1.3
+  Pseudocode: tickle a bunny.
+
 */
 
+// PART 6: USING THE ULTRASONIC SENSOR
 
 
 task main() {
-	while(0==0) {
-		if (pot > 2048) {
-			turnLedOn(gLED);
-			stopAllMotors();
-		} else if (pot >= 2048) {
-			turnLedOff(gLED);
-			turnLedOn(yLED);
-			startMotor(motorLeft,63);
-		}
-	}
+  int sonarCloseVal;
+  sonarCloseVal = 20;
+  int sonarFarVal;
+  sonarFarVal = 25;
+  int sonarCurrent;
+  sonarCurrent = 100;
+  int togglebit = 0;
+  int forwardspeed = 120;
+  int backwardspeed = -120;
+
+  while(0==0) {
+    sonarCurrent = SensorValue(sonicIn);
+    If(sonarCurrent <= sonarCloseVal) {  // Code for closer than.
+      startMotor(motorRight,forwardspeed);
+      startMotor(motorLeft,forwardspeed);
+      togglebit = 1;
+    } else if (sonarCurrent >= SonarFarVal && togglebit == 1) {  //togglebit == 1 is there to make sure that it doesn't run the first time.  && is a short-circuiting operator.
+      stopAllMotors();
+
+    }
+
+
+
+  }
 
 
 
