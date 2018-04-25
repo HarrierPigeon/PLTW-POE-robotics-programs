@@ -1,11 +1,4 @@
-/*
-  Project Title: Basic Outputs Programming, Part 4
-  Team Members: Joseph
-  Date: 2018-04-7
-  Section: 3.1.2
-  Pseudocode: Follow 3.1.2's procedures.
 
-*/
 #pragma config(Sensor, in1,    line,           sensorLineFollower)
 #pragma config(Sensor, in2,    pot,            sensorPotentiometer)
 #pragma config(Sensor, in3,    light,          sensorReflection)
@@ -21,6 +14,14 @@
 #pragma config(Motor,  port9,           servo,         tmotorNone, openLoop)
 
 
+/*
+  Project Title: Basic Outputs Programming, Part 4
+  Team Members: Joseph
+  Date: 2018-04-7
+  Section: 3.1.2
+  Pseudocode: Follow 3.1.2's procedures.
+
+*/
 task main()
 {
   while(1){
