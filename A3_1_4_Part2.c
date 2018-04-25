@@ -24,7 +24,7 @@
 task main() {
 
 	int darkThreshold;
-
+	darkThreshold = 1200;
 	while (0==0)//repeat indefinitely
 {
 		/*
@@ -35,9 +35,9 @@ task main() {
 				If your group doesn’t have the flashlight, use a motor instead.
 		*/
 
-    if (SensorValue[limitSwitch] =1)//repeat while limitSwitch pressed
+    if (SensorValue[limitSwitch] == 1)//repeat while limitSwitch pressed
     {
-        if (SensorValue[] )//respond to lightSensor
+        if (SensorValue[light] <= darkThresold)//respond to lightSensor
         {
 
         }
