@@ -1,4 +1,3 @@
-
 #pragma config(Sensor, dgtl10, rLED,           sensorLEDtoVCC)
 #pragma config(Sensor, dgtl11, yLED,           sensorLEDtoVCC)
 #pragma config(Sensor, dgtl12, gLED,           sensorLEDtoVCC)

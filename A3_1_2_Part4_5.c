@@ -1,4 +1,3 @@
-
 #pragma config(Sensor, in1,    line,           sensorLineFollower)
 #pragma config(Sensor, in2,    pot,            sensorPotentiometer)
 #pragma config(Sensor, in3,    light,          sensorReflection)
@@ -28,8 +27,6 @@
   | Go to position 127 for 2 seconds.
 
 */
-  
-
 task main()
 {
   while(1){
