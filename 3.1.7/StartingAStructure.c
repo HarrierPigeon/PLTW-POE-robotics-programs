@@ -27,17 +27,35 @@
 
 
 //DECLARING "STATIC" VARIABLES FOR MATH STUFF
-struct MotorControlStructure
+struct MotorControlStructure 		// (StructureName)
 {
-	int motorPort;
-	int encoderPort;
-	int toothRatio;
-	int encoderCalibrationValue;
+	int motorPort;								// (StructureName).motorPort
+	int encoderPort;							// (StructureName).encoderPort
+	int gearRatio;								// (StructureName).gearRatio
+	int encoderCalibrationValue;	// (StructureName).encoderCalibrationValue
+};
+
+struct ArmLengthMathSubStructure // (struct RobotArmControlStructure name).(struct ArmLengthMathSubStructure).XXX
+{
+	 float length;
+	 float height;
+	 float MA;
+	 float angleA;
+	 float lengthA;
+	 float angleB;
+	 float lengthB;
+	 float angleC;
+	 float lengthC;
+
 };
 
 struct RobotArmControlStructure
-{		 	
-	
+{
+	struct MotorControlStructure shoulder;
+	struct MotorControlStructure elbow;
+	struct MotorControlStructure wrist;
+	struct ArmLengthMathSubStructure lengthMath;
+
 };
 
 
@@ -65,7 +83,7 @@ task main()
 
 
 	while (0!=1) {
-		/*  I'm at home with a partially built bot, so I changed it up a bit to work on arm code.  
+		/*  I'm at home with a partially built bot, so I changed it up a bit to work on arm code.
 			I unplugged the base rotation IEM to get a second cord to extend the reach of the wire so that the bodged-on first joint I made with pieces from the base could have IEM readings.
 			I2C 1 : base lift
 			I2C 2 : elbow lift
@@ -76,8 +94,20 @@ task main()
 
 
 		*/
-
-
+		if (vexRT[Btn5U] == 1) {
+				startMotor(baseLift,30);
+		} else if (vexRT[Btn5D] == 1) {
+				startMotor(baseLift,-30);
+		} else {
+			stopMotor(baseLift);
+		}
+				if (vexRT[Btn6U] == 1) {
+				startMotor(elbowLift,30);
+		} else if (vexRT[Btn6D] == 1) {
+				startMotor(elbowLift,-30);
+		} else {
+			stopMotor(elbowLift);
+		}
 }
 
 
