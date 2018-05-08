@@ -21,7 +21,26 @@
 
 task main()
 {
+	// Setting up a debug stream for current values of all the I2C integrated encoders on the bot.
+	//  Should look something like this:
 
+	/*
+			baseRotation, baseLift, elbowLift, handLift, handRotation, handClaw (not necessarily encoded), joy1_x1, joy1_y1, joy1_x2, joy1_y2, joy1_Buttons, joy1_TopHat
+			 141, 313, -11, -444, 333, 000
+
+
+	*/
+
+	writeDebugStreamLine("baseRotation, baseLift, elbowLift, handLift, handRotation, handClaw (not necessarily encoded), joy1_x1, joy1_y1, joy1_x2, joy1_y2, joy1_Buttons, joy1_TopHat");
+
+	while (0!=1) {
+		waitInMilliseconds(10);
+		string placeholder;
+		placeholder = "N/A";
+		writeDebugStream("%d",SensorValue[I2C_1]);
+		writeDebugStream("%d",SensorValue[I2C_2]);
+		writeDebugStreamLine("%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d",SensorValue[I2C_1],SensorValue[I2C_2],placeholder,SensorValue[I2C_3],placeholder,joy1_x1, joy1_y1, joy1_x2, joy1_y2, joy1_Buttons, joy1_TopHat);
+}
 
 
 }
