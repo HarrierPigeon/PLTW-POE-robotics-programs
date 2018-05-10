@@ -180,15 +180,15 @@ struct MotorControlStructure    // (StructureName)
 
 
 //basic crappy structure setter upper.
-/*FUNCTION*/ void setMotorStructsUp(struct MotorControlStructure Base, struct MotorControlStructure Elbow, struct MotorControlStructure Wrist, struct MotorControlStructure Claw, struct MotorControlStructure BaseRotationLOL) {
+/*FUNCTION*/ void setMotorStructsUp(struct MotorControlStructure baseLOLOLOLOLO, struct MotorControlStructure elbow, struct MotorControlStructure wrist, struct MotorControlStructure Claw, struct MotorControlStructure BaseRotationLOL) {
   //Base
-  base.motorPort = baseLift;
-  base.upperLimitPort = baseLiftUpper;
-  base.lowerLimitPort = baseLiftLower;
-  base.maxPower = 62;
-  base.joystickControlPort = Ch3;
-  base.isJoystick = 1;
-  base.reverse = 1;
+  baseLOLOLOLOLO.motorPort = baseLift;
+  baseLOLOLOLOLO.upperLimitPort = baseLiftUpper;
+  baseLOLOLOLOLO.lowerLimitPort = baseLiftLower;
+  baseLOLOLOLOLO.maxPower = 62;
+  baseLOLOLOLOLO.joystickControlPort = Ch3;
+  baseLOLOLOLOLO.isJoystick = 1;
+  baseLOLOLOLOLO.reverse = 1;
 
   //Elbow
   elbow.motorPort = elbowLift;
@@ -200,7 +200,7 @@ struct MotorControlStructure    // (StructureName)
   elbow.reverse = 1;
 
   //Wrist
-  wrist.motorPort = wristLift;
+  wrist.motorPort = handLift;
   wrist.upperLimitPort = wristLiftUpper;
   wrist.lowerLimitPort = wristLiftLower;
   wrist.maxPower = 62;
@@ -209,7 +209,7 @@ struct MotorControlStructure    // (StructureName)
   wrist.reverse = 1;
 
   //BaseRotation
-  BaseRotationLOL.motorPort = BaseRotation;
+  BaseRotationLOL.motorPort = baseRotation;
   //BaseRotation.upperLimitPort = BaseRotationUpper;
   //BaseRotation.lowerLimitPort = BaseRotationLower;  // SHOULDN'T NEED LIMITS.
   BaseRotationLOL.maxpower = 62;
@@ -230,15 +230,15 @@ struct MotorControlStructure    // (StructureName)
 
 }
 
-function int EasyWayOutOfPower(struct MotorControlStructure current) {
+/*function*/ int EasyWayOutOfPower(struct MotorControlStructure current) {
   int returnval;
   int powerdivider;
   powerdivider = 2;
   if(VexRT[current.notJoystickUpButton] == 1) {
-    returnval = current.maxPower / powerdivider * current.reverse; 
+    returnval = current.maxPower / powerdivider * current.reverse;
   } else if (VexRT[current.notJoystickDownButton] == 1) {
     returnval = current.maxPower / powerdivider * current.reverse * -1;
-  } else { 
+  } else {
     returnval = 0;
   }
   return returnval;
@@ -254,7 +254,7 @@ function int EasyWayOutOfPower(struct MotorControlStructure current) {
   } else {
     stopMotor(current.motorPort);
   }
-
+	return VexRT[current.joystickControlPort]/128*current.maxPower;
 }
 
 
@@ -264,13 +264,15 @@ task main()
   struct MotorControlStructure baseLiftStruct;
   struct MotorControlStructure elbowLiftStruct;
   struct MotorControlStructure handLiftStruct;
+  struct MotorControlStructure clawStruct;
 
-  setMotorStructsUp(baseLiftStruct,elbowLiftStruct,handLiftStruct,baseRotationStruct);
-  while (0!-1) {
+  setMotorStructsUp(baseLiftStruct,elbowLiftStruct,handLiftStruct,clawStruct,baseRotationStruct);
+  while (0!=1) {
     moveJoints(baseRotationStruct);
     moveJoints(baseLiftStruct);
     moveJoints(elbowLiftStruct);
     moveJoints(handLiftStruct);
+    moveJoints(clawStruct);
   }
 
 }
