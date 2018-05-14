@@ -28,7 +28,7 @@
 > ##### I decided to calibrate it by putting limit switches on the ends of the rotation, and encoders on the motors.  The way this works is by counting the number of degrees the motor turns between the maximum and minimum positions of the arm.
 
 | `Loose-Leaf Drawing` | `Engineering Notebook` | `Transcript` |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | ![Page on calibration](/3.1.7/Documentation/Reusable%20Calibration%20Code%20Idea%2C%20Psuedocode%2C%20and%20Structure%20Requirements%20Recolor%20Crop.png) | `<Insert Engineering notebook page here>` | ###### How & Why The Code Works: <br> > This assumes that you know why you're putting the origin where it is.  <br> The *relative* origin, for the base of the arm, should be horizontal and parallel from the floor and the base of the robot. <br>  For The elbow, the second joint, the *relative* origin should be the line between the first joint and the second joint. <br> for this purpose, this method is a PERFECT fit- the measurement needed is from the angle to the two sides next to it. |
 
 ### After calibration, the next thing to do is be able to move the bot's joints ***at the same speed***.
@@ -67,10 +67,6 @@ Anyway, here are some photos:
 |![Potato Claw and Wrist Nonmotor side.JPG](/3.1.7/Documentation/Potato/Potato%20Claw%20and%20Wrist%20Nonmotor%20side.JPG) |![Potato Elbow Encoder Side.JPG](/3.1.7/Documentation/Potato/Potato%20Elbow%20Encoder%20Side.JPG) |![Potato Elbow Gear Connection Detail 2.JPG](/3.1.7/Documentation/Potato/Potato%20Elbow%20Gear%20Connection%20Detail%202.JPG) |
 | More Elbow details | Top-down of humerus | 
 |![Potato Elbow Gear Connection Detail.JPG](/3.1.7/Documentation/Potato/Potato%20Elbow%20Gear%20Connection%20Detail.JPG) |![Potato Elbow Top View.JPG](/3.1.7/Documentation/Potato/Potato%20Elbow%20Top%20View.JPG)|
-
-## Robot Arm Programming 
-
-I'm currently working on a *whole* new set of things from what I'm used to.
 
 # Helpful Resources:
 > http://www.robotc.net/wikiarchive/Data_Types `Nice little cheatsheet`
