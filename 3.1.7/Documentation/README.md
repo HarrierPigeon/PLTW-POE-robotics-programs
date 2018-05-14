@@ -22,7 +22,8 @@
 ![Moving in 1 axis by rotation](/3.1.7/Documentation/Moving%20in%201%20axis%20by%20rotation%20while%20keeping%20the%20other%20constant.png)
 
 #### The next is keeping the height the same while changing the length:
-![Maintaining Constant Height While Changing Length](/3.1.7/Documentation/Maintaining%20Constant%20Height%20While%20Changing%20Length%20Scan%20ReColor.png)
+![Maintaining Constant Height While Changing Length](/3.1.7/Documentation/
+Constant%20Height%20While%20Changing%20Length%20Scan%20ReColor.png)
 
 #### Once I figured out what I needed to do, I had to figure out how to calibrate it.
 > ##### I decided to calibrate it by putting limit switches on the ends of the rotation, and encoders on the motors.  The way this works is by counting the number of degrees the motor turns between the maximum and minimum positions of the arm.
@@ -30,6 +31,15 @@
 | `Loose-Leaf Drawing` | `Engineering Notebook` | `Transcript` |
 | :---: | :---: | :---: |
 | ![Page on calibration](/3.1.7/Documentation/Reusable%20Calibration%20Code%20Idea%2C%20Psuedocode%2C%20and%20Structure%20Requirements%20Recolor%20Crop.png) | `<Insert Engineering notebook page here>` | ###### How & Why The Code Works: <br> > This assumes that you know why you're putting the origin where it is.  <br> The *relative* origin, for the base of the arm, should be horizontal and parallel from the floor and the base of the robot. <br>  For The elbow, the second joint, the *relative* origin should be the line between the first joint and the second joint. <br> for this purpose, this method is a PERFECT fit- the measurement needed is from the angle to the two sides next to it. |
+
+
+![Base Rotation, page 2](/3.1.7/Documentation/Base%20Rotation%20Control%20Code%20Recolor.png)
+
+> Drawing of the geometry of it:
+#### `Making the Math Work (Arm Length)`
+
+![Making the math work: arm length](/3.1.7/Documentation/Making%20the%20Math%20Work%20(Arm%20Length)%20-%20Sketch%20Page%20on%20calibration%20Recolor.png)
+
 
 ### After calibration, the next thing to do is be able to move the bot's joints ***at the same speed***.
 
