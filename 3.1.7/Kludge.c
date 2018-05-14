@@ -46,6 +46,32 @@
                    \,()(|(/_ |)\/ | |(||`|`|(/_|`| |(|(/_()||
                                /                    _|
 
+
+                                                                                                          
+                                            ddddd                            
+KKKKKK    KKKKKKKlllll                       d:::d                            
+K::::K    K:::::Kl:::l                       d:::d                            
+K::::K    K:::::Kl:::l                       d:::d                            
+K::::K   K::::::Kl:::l                       d::d                             
+KK:::K  K:::::KKK l::l uuuuu  uuuu     ddddddd::d    ggggggg   ggg   eeeeee   
+  K::K K:::::K    l::l u:::u  u::u    d:::::::::d   g:::::::ggg::g  e::::::e  
+  K:::K:::::K     l::l u:::u  u::u   d::::::::::d  g:::::::::::::g e::eee:::ee
+  K::::::::K      l::l u:::u  u::u  d::::ddddd::d g:::::gggg::::gge::e   e:::e
+  K::::::::K      l::l u:::u  u::u  d:::d    d::d g::::g    g:::g e:::eee::::e
+  K:::K:::::K     l::l u:::u  u::u  d::d     d::d g::::g    g:::g e:::::::::e 
+  K::K K:::::K    l::l u:::u  u::u  d::d     d::d g::::g    g:::g e::eeeeeee  
+KK:::K  K:::::KKK l::l u::::uu:::u  d::d     d::d g:::::g   g:::g e:::e       
+K::::K   K::::::Kl::::lu::::::::::uud:::ddddd:::ddg::::::gggg:::g e::::e      
+K::::K    K:::::Kl::::l u::::::::::u d:::::::::::d g::::::::::::g  e::::eeee  
+K::::K    K:::::Kl::::l  u:::::::::u  d::::::dd::d  g:::::::::::g   e::::::e  
+KKKKKK    KKKKKKKllllll   uuuuuuuuuu   dddddd  ddd   ggggggg::::g    eeeeeee  
+                                                            g:::g             
+                                                  ggggg     g:::g             
+                                                  g::::gg  gg:::g             
+                                                    g:::::gg:::::g             
+                                                    g:::::::::::              
+                                                      ggg:::::gg               
+                                                        ggggg                 
  */
 
 // By the way, this is for a Vex Cortex with PLTW Natural Language Enabled and C functions enabled as well.
@@ -227,7 +253,6 @@ struct MotorControlStructure    // (StructureName)
   Claw.notJoystickDownButton = Btn5D;
   Claw.reverse = 1;
 
-
 }
 
 /*function*/ int EasyWayOutOfPower(struct MotorControlStructure current) {
@@ -257,7 +282,6 @@ struct MotorControlStructure    // (StructureName)
 	return VexRT[current.joystickControlPort]/128*current.maxPower;
 }
 
-
 task main()
 {
   struct MotorControlStructure baseRotationStruct;
@@ -274,5 +298,4 @@ task main()
     moveJoints(handLiftStruct);
     moveJoints(clawStruct);
   }
-
 }
