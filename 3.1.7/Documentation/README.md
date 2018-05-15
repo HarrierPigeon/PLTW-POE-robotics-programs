@@ -64,7 +64,7 @@ Constant%20Height%20While%20Changing%20Length%20Scan%20ReColor.png)
 ### > I wrote some basic code to see how well the bot worked.
 > ####   It didn't.
 
-    First, the robot wasn't able to rotate because of how much axial (?) torque there was on the turntable, then the arm fell down because the shoulder's motor couldn't keep up with the stress, and the elbow had the same issue.
+    First, the robot wasn't able to rotate because of how much axial stress there was on the turntable, then the arm fell down because the shoulder's motor couldn't keep up with the stress, and the elbow had the same issue.
     
 Anyway, here are some photos:
 
